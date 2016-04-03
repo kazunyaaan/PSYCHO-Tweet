@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ng Words</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Word</th>
+      <th>Point</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ng_words.each do |ng_word| %>
+      <tr>
+        <td><%= ng_word.word %></td>
+        <td><%= ng_word.point %></td>
+        <td><%= link_to 'Show', ng_word %></td>
+        <td><%= link_to 'Edit', edit_ng_word_path(ng_word) %></td>
+        <td><%= link_to 'Destroy', ng_word, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ng word', new_ng_word_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @ng_word.word %>
+</p>
+
+<p>
+  <strong>Point:</strong>
+  <%= @ng_word.point %>
+</p>
+
+<%= link_to 'Edit', edit_ng_word_path(@ng_word) %> |
+<%= link_to 'Back', ng_words_path %>
